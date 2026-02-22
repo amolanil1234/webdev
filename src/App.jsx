@@ -224,8 +224,8 @@ export default function App() {
           </p>
           <div className="contact-wrap">
             <div className="contact-info">
-              <a href="tel:+919876543210" className="contact-link">📞 +91 98765 43210</a>
-              <a href="https://wa.me/919876543210" className="btn btn-primary whatsapp" target="_blank" rel="noopener noreferrer">
+              <a href="tel:+919834842052" className="contact-link">📞 +91 98348 42052</a>
+              <a href="https://wa.me/919834842052" className="btn btn-primary whatsapp" target="_blank" rel="noopener noreferrer">
                 WhatsApp
               </a>
               <div className="social-links">
