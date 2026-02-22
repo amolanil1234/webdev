@@ -249,10 +249,9 @@ export default function App() {
               >
                 <input type="hidden" name="access_key" value={WEB3FORMS_ACCESS_KEY} />
                 <input type="hidden" name="subject" value="Summer Art Camp – Reserve a spot" />
-                <input type="text" name="parent_name" placeholder="Parent's name" required />
-                <input type="tel" name="phone" placeholder="Phone" required />
-                <input type="email" name="email" placeholder="Email" required />
-                <input type="text" name="child_name_age" placeholder="Child's name & age" required />
+                <input type="text" name="name" placeholder="Your name" required />
+                <input type="tel" name="phone" placeholder="Phone number" required />
+                <textarea name="message" placeholder="Any questions? (optional)" rows={3} className="enroll-form-textarea" />
                 <button type="submit" className="btn btn-primary btn-full">Reserve a Spot</button>
               </form>
             ) : (

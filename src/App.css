@@ -485,15 +485,24 @@
   font-size: 1rem;
 }
 
-.enroll-form input {
+.enroll-form input,
+.enroll-form-textarea {
   padding: 0.875rem 1rem;
   border: 1px solid #e0ddd8;
   border-radius: 10px;
   font-family: var(--font-body);
   font-size: 1rem;
+  resize: vertical;
+  min-height: 44px;
 }
 
-.enroll-form input:focus {
+.enroll-form-textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.enroll-form input:focus,
+.enroll-form-textarea:focus {
   outline: none;
   border-color: var(--sage);
   box-shadow: 0 0 0 3px rgba(125, 155, 118, 0.2);
