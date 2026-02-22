@@ -53,6 +53,7 @@ export default function App() {
           onError={(e) => { e.target.style.display = 'none' }}
         />
         <div className="container hero-inner">
+          <p className="hero-badge">✨ Summer Art Camp</p>
           <h1 className="hero-title">Unleash Your Child's Creativity This Summer</h1>
           <p className="hero-sub">Where imagination meets colors, textures, and joyful expression.</p>
           <p className="hero-para">
@@ -70,6 +71,7 @@ export default function App() {
       <section className="section about" id="about">
         <div className="container">
           <div className="paint-stroke" />
+          <span className="section-badge" aria-hidden>💛</span>
           <h2 className="section-title">About Our Summer Art Camp</h2>
           <p className="section-subtitle">Warm, reassuring, and nurturing — for every young artist.</p>
           <div className="about-content">
@@ -93,6 +95,7 @@ export default function App() {
       <section className="section art-forms" id="art-forms">
         <div className="container texture-bg art-forms-inner">
           <div className="paint-stroke" />
+          <span className="section-badge" aria-hidden>🎨</span>
           <h2 className="section-title">Art Forms We Offer</h2>
           <p className="section-subtitle">Something magical for every interest.</p>
           <div className="art-grid">
@@ -112,6 +115,7 @@ export default function App() {
         <div className="container">
           <div className="why-decoration" aria-hidden />
           <div className="paint-stroke" />
+          <span className="section-badge" aria-hidden>💚</span>
           <h2 className="section-title">Why Parents Love This Camp</h2>
           <p className="section-subtitle">Trust, care, and results.</p>
           <div className="trust-grid">
@@ -164,6 +168,7 @@ export default function App() {
       <section className="section gallery" id="gallery">
         <div className="container">
           <div className="paint-stroke" />
+          <span className="section-badge" aria-hidden>📸</span>
           <h2 className="section-title">Gallery</h2>
           <p className="section-subtitle">Joy, colors, and proud creations.</p>
           <div className="gallery-grid">
@@ -191,6 +196,7 @@ export default function App() {
       <section className="section testimonials-sec" id="testimonials">
         <div className="container">
           <div className="paint-stroke" />
+          <span className="section-badge" aria-hidden>⭐</span>
           <h2 className="section-title">What Parents Say</h2>
           <p className="section-subtitle">Real stories from real families.</p>
           <div className="testimonials-grid">
@@ -262,7 +268,8 @@ export default function App() {
 
       <footer className="footer">
         <div className="container">
-          <p>© Summer Art Camp for Kids. Made with care for creative families.</p>
+          <p className="footer-heart">Made with care for creative families 💛</p>
+          <p className="footer-copy">© Summer Art Camp for Kids</p>
         </div>
       </footer>
     </div>
