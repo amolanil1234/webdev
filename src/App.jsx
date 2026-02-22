@@ -43,14 +43,18 @@ const galleryImages = [
 ]
 const heroImage = 'hero.jpg' // optional: kids painting / natural light
 
+// Web3Forms: get your key at https://web3forms.com (enter amol.eng@gmail.com, they email you the key)
+const WEB3FORMS_ACCESS_KEY = 'REPLACE_WITH_YOUR_ACCESS_KEY'
+
 export default function App() {
+  const base = import.meta.env.BASE_URL // e.g. '/webdev/' on GitHub Pages so images load
   return (
     <div className="app">
       {/* Hero */}
       <header className="hero texture-bg">
         <div className="hero-bg-pattern" aria-hidden />
         <img
-          src={`/images/${heroImage}`}
+          src={`${base}images/${heroImage}`}
           alt="Children enjoying art camp"
           className="hero-photo"
           onError={(e) => { e.target.style.display = 'none' }}
@@ -173,7 +177,7 @@ export default function App() {
             {galleryImages.map((filename, i) => (
               <div key={filename} className="gallery-item" style={{ '--delay': i + 1 }}>
                 <img
-                  src={`/images/${filename}`}
+                  src={`${base}images/${filename}`}
                   alt={`Camp gallery ${i + 1}`}
                   className="gallery-img"
                   onError={(e) => {
@@ -201,7 +205,7 @@ export default function App() {
               <blockquote key={i} className="testimonial-card">
                 <div className="testimonial-image-wrap">
                   <img
-                    src={`/images/${t.image}`}
+                    src={`${base}images/${t.image}`}
                     alt=""
                     className="testimonial-image"
                     onError={(e) => e.target.parentElement?.classList.add('hide')}
@@ -237,11 +241,18 @@ export default function App() {
                 <a href="#" aria-label="Facebook">Facebook</a>
               </div>
             </div>
-            <form className="enroll-form" id="enroll" onSubmit={(e) => e.preventDefault()}>
-              <input type="text" placeholder="Parent's name" required />
-              <input type="tel" placeholder="Phone" required />
-              <input type="email" placeholder="Email" required />
-              <input type="text" placeholder="Child's name & age" required />
+            <form
+              className="enroll-form"
+              id="enroll"
+              action="https://api.web3forms.com/submit"
+              method="POST"
+            >
+              <input type="hidden" name="access_key" value={WEB3FORMS_ACCESS_KEY} />
+              <input type="hidden" name="subject" value="Summer Art Camp – Reserve a spot" />
+              <input type="text" name="parent_name" placeholder="Parent's name" required />
+              <input type="tel" name="phone" placeholder="Phone" required />
+              <input type="email" name="email" placeholder="Email" required />
+              <input type="text" name="child_name_age" placeholder="Child's name & age" required />
               <button type="submit" className="btn btn-primary btn-full">Reserve a Spot</button>
             </form>
           </div>
