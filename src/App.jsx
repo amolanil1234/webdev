@@ -30,16 +30,8 @@ const testimonials = [
 
 // Add your photo filenames here (place files in public/images/)
 const galleryImages = [
-  'WhatsApp Image 2026-02-22 at 8.56.39 PM.jpeg',
-  'WhatsApp Image 2026-02-22 at 8.56.40 PM (1).jpeg',
-  'WhatsApp Image 2026-02-22 at 8.56.40 PM.jpeg',
-  'WhatsApp Image 2026-02-22 at 8.56.41 PM.jpeg',
-  'WhatsApp Image 2026-02-22 at 8.56.42 PM (1).jpeg',
-  'WhatsApp Image 2026-02-22 at 8.56.42 PM (2).jpeg',
-  'WhatsApp Image 2026-02-22 at 8.56.42 PM.jpeg',
-  'WhatsApp Image 2026-02-22 at 8.56.43 PM (1).jpeg',
-  'WhatsApp Image 2026-02-22 at 8.56.43 PM (2).jpeg',
-  'WhatsApp Image 2026-02-22 at 8.56.43 PM.jpeg',
+  'image1.jpeg', 'image2.jpeg', 'image3.jpeg', 'image4.jpeg', 'image5.jpeg',
+  'image6.jpeg', 'image7.jpeg', 'image8.jpeg', 'image9.jpeg', 'image10.jpeg',
 ]
 const heroImage = 'hero.jpg' // optional: kids painting / natural light
 
