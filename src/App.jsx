@@ -35,8 +35,9 @@ const galleryImages = [
 ]
 const heroImage = 'hero.jpg' // optional: kids painting / natural light
 
-// Web3Forms: get your key at https://web3forms.com (enter amol.eng@gmail.com, they email you the key)
-const WEB3FORMS_ACCESS_KEY = 'REPLACE_WITH_YOUR_ACCESS_KEY'
+// Web3Forms: submissions go to amol.eng@gmail.com
+const WEB3FORMS_ACCESS_KEY = 'eed602cb-cb07-439c-a33d-bb3bd5001a39'
+const FORM_READY = true
 
 export default function App() {
   const base = import.meta.env.BASE_URL // e.g. '/webdev/' on GitHub Pages so images load
@@ -233,20 +234,28 @@ export default function App() {
                 <a href="#" aria-label="Facebook">Facebook</a>
               </div>
             </div>
-            <form
-              className="enroll-form"
-              id="enroll"
-              action="https://api.web3forms.com/submit"
-              method="POST"
-            >
-              <input type="hidden" name="access_key" value={WEB3FORMS_ACCESS_KEY} />
-              <input type="hidden" name="subject" value="Summer Art Camp – Reserve a spot" />
-              <input type="text" name="parent_name" placeholder="Parent's name" required />
-              <input type="tel" name="phone" placeholder="Phone" required />
-              <input type="email" name="email" placeholder="Email" required />
-              <input type="text" name="child_name_age" placeholder="Child's name & age" required />
-              <button type="submit" className="btn btn-primary btn-full">Reserve a Spot</button>
-            </form>
+            {FORM_READY ? (
+              <form
+                className="enroll-form"
+                id="enroll"
+                action="https://api.web3forms.com/submit"
+                method="POST"
+              >
+                <input type="hidden" name="access_key" value={WEB3FORMS_ACCESS_KEY} />
+                <input type="hidden" name="subject" value="Summer Art Camp – Reserve a spot" />
+                <input type="text" name="parent_name" placeholder="Parent's name" required />
+                <input type="tel" name="phone" placeholder="Phone" required />
+                <input type="email" name="email" placeholder="Email" required />
+                <input type="text" name="child_name_age" placeholder="Child's name & age" required />
+                <button type="submit" className="btn btn-primary btn-full">Reserve a Spot</button>
+              </form>
+            ) : (
+              <div className="enroll-form enroll-form-fallback">
+                <p className="enroll-fallback-text">Reserve your spot by calling or WhatsApp — we'll get you registered.</p>
+                <a href="tel:+919834842052" className="btn btn-primary btn-full">Call +91 98348 42052</a>
+                <a href="https://wa.me/919834842052" className="btn btn-secondary btn-full" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              </div>
+            )}
           </div>
         </div>
       </section>

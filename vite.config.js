@@ -1,9 +1,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// GitHub Pages: https://amolanil1234.github.io/webdev/
-// When you own a custom domain (e.g. summercamp.com), change base to '/' and add domain in Settings → Pages
+// Custom domain: https://summercampsbt.com (base '/' so assets load at root)
 export default defineConfig({
   plugins: [react()],
-  base: '/webdev/',
+  base: '/',
 })
