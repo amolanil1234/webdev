@@ -450,6 +450,31 @@
   color: var(--sage-dark);
 }
 
+.btn-payment {
+  align-self: flex-start;
+  background: var(--white);
+  color: var(--sage-dark);
+  border: 2px solid var(--white);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+
+.btn-payment:hover {
+  background: var(--cream-warm);
+  color: var(--sage-dark);
+  border-color: var(--white);
+  transform: translateY(-2px);
+}
+
+.btn-upi {
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.8);
+}
+
+.btn-upi:hover {
+  background: rgba(255,255,255,0.15);
+  border-color: var(--white);
+}
+
 .social-links {
   display: flex;
   gap: 1rem;

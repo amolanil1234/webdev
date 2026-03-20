@@ -39,6 +39,12 @@ const heroImage = 'hero.jpg' // optional: kids painting / natural light
 const WEB3FORMS_ACCESS_KEY = 'eed602cb-cb07-439c-a33d-bb3bd5001a39'
 const FORM_READY = true
 
+// Payment: paste your Razorpay (or Stripe) Payment Link URL here. Create one at https://dashboard.razorpay.com/app/payment-links
+const PAYMENT_LINK_URL = '' // e.g. 'https://rzp.io/l/your-link-id'
+
+// Free UPI-only: paste link from UPI PG (upipg.cit.org.in) or FreeUPI (freeupi.com). No transaction fee. See UPI-FREE-SETUP.md
+const UPI_PAYMENT_LINK_URL = '' // e.g. 'https://upipg.cit.org.in/...' or your FreeUPI payment page URL
+
 export default function App() {
   const base = import.meta.env.BASE_URL // e.g. '/webdev/' on GitHub Pages so images load
   return (
@@ -235,6 +241,16 @@ export default function App() {
               <a href="https://wa.me/919834842052" className="btn btn-primary whatsapp" target="_blank" rel="noopener noreferrer">
                 WhatsApp
               </a>
+              {PAYMENT_LINK_URL ? (
+                <a href={PAYMENT_LINK_URL} className="btn btn-payment" target="_blank" rel="noopener noreferrer">
+                  💳 Pay camp fees (cards / UPI)
+                </a>
+              ) : null}
+              {UPI_PAYMENT_LINK_URL ? (
+                <a href={UPI_PAYMENT_LINK_URL} className="btn btn-payment btn-upi" target="_blank" rel="noopener noreferrer">
+                  📱 Pay via UPI (no fee)
+                </a>
+              ) : null}
               <div className="social-links">
                 <a href="#" aria-label="Instagram">Instagram</a>
                 <a href="#" aria-label="Facebook">Facebook</a>
